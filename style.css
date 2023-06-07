@@ -1,0 +1,67 @@
+/*paparan produk*/
+.card {
+    float:left;
+    padding: 10px;
+    max-width: 200px;
+    margin: 2px;
+    width: 100%;
+    text-align: center;
+}
+
+/*frame gambar*/
+.picture {
+    height: 120px;
+    width: 100%;
+    border: thin solid black;
+}
+
+/*header*/
+.header{
+    width: 100%;
+    height: 200px;
+    background: url('gambar/banner.jpg');
+    background-size: cover;
+    color: black;
+    text-align: left;
+    padding-left: 5%;
+}
+
+/*left menu*/
+#menu {
+    position: absolute;
+    width: 40%;
+    left: 1%;
+}
+
+/*right content*/
+#content{
+    position: absolute;
+    width: 70%;
+    overflow: auto;
+}
+
+/*button*/
+button{
+    background-color: blue;
+    color: white;
+}
+
+/*background*/
+body{
+    background-image: url("gambar/back.jpg");
+    height: 100%;
+    background-size: cover;
+}
+
+/*table*/
+td,tr {
+    border: 1px;
+    background-color: #99CCFF;
+    text-align: left;
+    padding: 8px;
+}
+
+/*table row*/
+tr:nth-child(even) {
+    background-color: white;
+}
