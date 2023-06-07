@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 <html>
-    <div>
+    <div id="isi">
         <head>
             <h2 style = "text-align: center"> Daftar Pengguna Baru </h2>
         </head>
@@ -26,5 +26,4 @@
             </form>
         </body>
     </div>
-</html>   
-        
+</html>
