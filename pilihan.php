@@ -1,7 +1,10 @@
 <?php include 'header.php'; ?>
 <html>
+    <!-- panggil menu -->
     <div id="menu">
-    <?php include 'menu2.php'; ?></div>
+        <?php include 'menu2.php'; ?>
+    </div>
+    <!-- panggil isi -->
     <div id="isi">
         <body>
             <center>
@@ -23,8 +26,8 @@ FROM pilih AS t1 INNER JOIN produk AS t2 ON
 tl.idProduk=t2.idProduk GROUP BY t1.idProduk
 ORDER BY COUNT(t1.idPenggguna) DESC");
 
-while($infol=mysqli_fetch_array($datal)){
-
+while($infol=mysqli_fetch_array($datal))
+{
 ?>
 <tr>
     <td><?php echo $no; ?></td>
@@ -37,14 +40,15 @@ while($infol=mysqli_fetch_array($datal)){
 </tr>
 <?php $no++; } ?>
 <tr>
-    <td colspan="S" align="center">
-        <font style='font-size: 10px' >* SENARAI TAMAT * <br  />
-    Jumlah Pillhan :
-    <?php echo $no-1; ?> 
+    <td colspan="5" align="center">
+        <font style='font-size: 10px' >
+        * SENARAI TAMAT * <br  />
+        Jumlah Pillhan :
+     <?php echo $no-1; ?> 
     </font>
     <p><button onclick="javascript:window.print()"> CETAK </button></p>
     </td>
-</tr>
+    </tr>
             </table>
         </body>
     </div>
