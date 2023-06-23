@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2023 at 07:11 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jun 21, 2023 at 06:39 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `lapiport`
+-- Database: `kedaibukusy`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `jenama` (
   `idJenama` varchar(11) NOT NULL,
   `namaJenama` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -39,12 +39,19 @@ CREATE TABLE `jenama` (
 --
 
 CREATE TABLE `pengguna` (
-  `IdPengguna` varchar(30) NOT NULL,
+  `idPengguna` varchar(30) NOT NULL,
   `password` varchar(25) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `aras` varchar(10) DEFAULT NULL,
   `nomhp` varchar(12) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pengguna`
+--
+
+INSERT INTO `pengguna` (`idPengguna`, `password`, `nama`, `aras`, `nomhp`) VALUES
+('hello', 'hello', 'hello', '6012411829', 'PENGGUNA');
 
 -- --------------------------------------------------------
 
@@ -53,10 +60,10 @@ CREATE TABLE `pengguna` (
 --
 
 CREATE TABLE `pilihan` (
-  `idPilih` int(11) NOT NULL,
+  `idPilihan` int(11) NOT NULL,
   `idPengguna` varchar(20) DEFAULT NULL,
   `idProduk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -69,8 +76,9 @@ CREATE TABLE `produk` (
   `namaProduk` varchar(50) DEFAULT NULL,
   `deskripsi` longtext DEFAULT NULL,
   `idJenama` varchar(11) DEFAULT NULL,
-  `harga` decimal(15,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `harga` decimal(15,2) DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -86,13 +94,13 @@ ALTER TABLE `jenama`
 -- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  ADD PRIMARY KEY (`IdPengguna`);
+  ADD PRIMARY KEY (`idPengguna`);
 
 --
 -- Indexes for table `pilihan`
 --
 ALTER TABLE `pilihan`
-  ADD PRIMARY KEY (`idPilih`),
+  ADD PRIMARY KEY (`idPilihan`),
   ADD KEY `idProduk` (`idProduk`),
   ADD KEY `idPengguna` (`idPengguna`);
 
@@ -111,7 +119,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `pilihan`
 --
 ALTER TABLE `pilihan`
-  MODIFY `idPilih` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPilihan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produk`
