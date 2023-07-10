@@ -16,16 +16,16 @@
         <button id="color">Warna</button>
     </center>
     <script>
-        document.getElementbyId('color').onclick=changeColor;
-        var currentColor="red";  
+        document.getElementById('color').onclick = changeColor;
+        var currentColor ="red";
         function changeColor() {
-            if(currentColor=="red"){
-                document.body.style.color="blue";
-                currentColor="blue";
+            if(currentColor =="red"){
+                document.body.style.color ="blue";
+                currentColor ="blue";
             } else {
                 document.body.style.color="red";
-                currentColor ="red";
+                currentColor = "red";
             }
-        }     
+        }
     </script>
 </html>

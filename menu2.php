@@ -1,5 +1,5 @@
 <html>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <div id = "menu">
         <?php
         session_start();
@@ -8,8 +8,8 @@
         <h4>Menu Pengguna</h4>
         <ul>
             <li><a href="dashboard.php">HOME</a></li>
-            <li><?php include 'jenama_menu.php'; ?>Menu Jenama</a></li>
-            <li><?php include 'produk_cari.php'; ?>Carian Produk</a></li>
+            <li><a><?php include 'jenama_menu.php'; ?>Menu Jenama</a></li>
+            <li><a><?php include 'produk_cari.php'; ?>Carian Produk</a></li>
             <li><a href="logout.php">Log Keluar</a></li>
         </ul>
         <?php

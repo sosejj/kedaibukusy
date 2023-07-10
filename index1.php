@@ -12,7 +12,7 @@ include 'header.php';
                     SELAMAT DATANG ke <?php echo $kedai;  ?>
                 </h3>
                 <marquee behavior="alternate">
-                    Sila login untuk memilih barangan yang hedak dibeli
+                    Sila login untuk memilih barangan yang hendak dibeli
                 </marquee>
             </center>
         </head>
