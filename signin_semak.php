@@ -10,10 +10,12 @@ if (isset($_POST['username'])){
 	if (mysqli_num_rows($query) == 0 || $row['password'] != $pass)
 	{
 		echo "<script> alert('ID Pengguna atau Password salah');
-		window.location = 'index.php'</script>
+		window.location = 'index1.php'</script>";
 	} else {
 		$_SESSION ['username'] = $row ['idPengguna'];
 		$_SESSION ['nama'] = $row ['nama'];
 		$_SESSION ['level'] = $row ['aras'];
-		header("location: dashboard.php);
-	}}?>
+		header("location: dashboard.php");
+	}
+}
+?>

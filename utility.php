@@ -6,13 +6,13 @@
             document.body.style.fontSize = fontsize+"em";
         }
         function zoomout() {
-            fontsize == 0.1;
+            fontsize -= 0.1;
             document.body.style.fontSize = fontsize+"em";
         }
     </script>
     <center>
         <input type="button" value="++" onclick="zoomin()"/>
-        <input type="button" value="++" onclick="zoomin()"/>
+        <input type="button" value="--" onclick="zoomout()"/>
         <button id="color">Warna</button>
     </center>
     <script>

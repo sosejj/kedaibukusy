@@ -1,4 +1,4 @@
-<?php include 'header-php'; ?>
+<?php include 'header.php'; ?>
 <html>
 <!-- panggil menu -->
 <div id="menu">

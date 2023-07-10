@@ -1,4 +1,5 @@
 <html>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <div id = "menu">
         <?php
         session_start();
@@ -6,13 +7,13 @@
         ?>
         <h4>Menu Pengguna</h4>
         <ul>
-            <li><a href="dashboard.php"></a></li>
-            <li><?php include 'jenama_menu.php'; ?></a></li>
-            <li><?php include 'produk_cari.php'; ?></a></li>
-            <li><a href="logout.php"></a></li>
+            <li><a href="dashboard.php">HOME</a></li>
+            <li><?php include 'jenama_menu.php'; ?>Menu Jenama</a></li>
+            <li><?php include 'produk_cari.php'; ?>Carian Produk</a></li>
+            <li><a href="logout.php">Log Keluar</a></li>
         </ul>
         <?php
-        }else{
+        } else {
         ?>
         <h4>Menu ADMIN</h4>
         <ul>
@@ -21,6 +22,7 @@
             <li><a href="produk_tambah.php">Tambah Produk</a></li>
             <li><a href="pilihan.php">Pilihan Pengguna</a></li>
             <li><a href="dashboard.php">Keluar</a></li>
+            <li><a href="logout.php">Log Keluar</a></li>
         </ul>
         <?php } ?>
     </div>

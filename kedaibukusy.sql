@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2023 at 06:39 AM
+-- Generation Time: Jul 05, 2023 at 07:31 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -51,7 +51,8 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`idPengguna`, `password`, `nama`, `aras`, `nomhp`) VALUES
-('hello', 'hello', 'hello', '6012411829', 'PENGGUNA');
+('012345678910', '12345', 'shiyang', 'ADMIN', '0124118296'),
+('060109070817', 'hello', 'user', 'PENGGUNA', '0123456789');
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,7 @@ ALTER TABLE `pilihan`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

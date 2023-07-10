@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 <html>
 <div id=" menu">
-    <?php include 'menu.php'; ?>
+    <?php include 'menu2.php'; ?>
 </div>
 
 <div id="isi"> 
@@ -21,7 +21,7 @@
         {
             echo "<option hidden selected> --PILIH </option> ";
             echo "<option value='$pilihan[idJenama]'>
-            $pilihan[namaJenama]‹/option>";
+            $pilihan[namaJenama]</option>";
         }
         ?>
         </select>

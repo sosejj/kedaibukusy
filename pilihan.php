@@ -21,10 +21,10 @@
 <?php
 $no=1;
 $datal=mysqli_query ($conn, "SELECT t2.namaProduk,
-COUNT (tl.idPengguna) AS kira, t2.harga,t2.gambar
-FROM pilih AS t1 INNER JOIN produk AS t2 ON 
-tl.idProduk=t2.idProduk GROUP BY t1.idProduk
-ORDER BY COUNT(t1.idPenggguna) DESC");
+COUNT(t1.idPengguna) AS kira, t2.harga,t2.gambar
+FROM pilihan AS t1 INNER JOIN produk AS t2 ON 
+t1.idProduk=t2.idProduk GROUP BY t1.idProduk
+ORDER BY COUNT(t1.idPengguna) DESC");
 
 while($infol=mysqli_fetch_array($datal))
 {

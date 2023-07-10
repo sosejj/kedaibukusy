@@ -1,5 +1,6 @@
 <?php include 'header.php'; ?>
 <html>
+<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 <div id=" menu">
     <?php include 'menu2.php'; ?>
 </div>

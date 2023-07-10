@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     ["tmp_name"],$uploadPath );
     
     $nama=$_POST['nama'];
-    $jenama-=$_POST ['jenama'];
+    $jenama=$_POST ['namaJenama'];
     $harga=$_POST['harga']; 
     $detail=$_POST['detail'];
 
