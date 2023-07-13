@@ -4,7 +4,7 @@ require 'connect.php';
 if(isset($_POST['submit'])){
     $jenama=$_POST['jenama'];
 
-// input rekod dalam database
+    // input rekod dalam database
     $baharu = "INSERT INTO jenama VALUES (NULL, '$jenama')";
 
     $barangan=mysqli_query($conn, $baharu);
@@ -16,4 +16,4 @@ if(isset($_POST['submit'])){
         window.location='jenama_tambah.php'</script>";
     }
     }
-    ?>
+?>

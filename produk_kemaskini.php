@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 
 // update
 $result2 = mysqli_query($conn, "UPDATE produk SET namaProduk = '$nama',
-detail='$detail', harga='$harga', gambar='$gambar', idJenama='$jenama' WHERE idProduk='id'");
+deskripsi='$detail', harga='$harga', gambar=gambar, idJenama='$jenama' WHERE idProduk='$id'");
 echo "<script> alert ('Kemaskini Produk Berjaya'); window.location='produk.php'</script>";
 }
 ?>

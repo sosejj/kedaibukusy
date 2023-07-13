@@ -30,7 +30,7 @@ while ($infol=mysqli_fetch_array($datal))
 <tr>
     <td><?php echo $no; ?></td>
     <td><?php echo $infol['namaProduk']; ?></td>
-    <td><?php echo $infol['namajenama']; ?></td> 
+    <td><?php echo $infol['namaJenama']; ?></td> 
     <td>RM<?php echo $infol['harga']; ?></td> 
     <td width="200px"><img src="gambar/<?php echo $infol['gambar']; ?>
     "width = "auto" height="120px"></td> 
