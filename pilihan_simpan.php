@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
     $produk = $_POST['idProduk'];
     $pengguna = $_POST['idPengguna'];
     // masuk rekod dlm table
-    $baharu = "INSERT INTO pilih VALUES (NULL,'$pengguna','$produk')";
+    $baharu = "INSERT INTO pilihan VALUES (NULL,'$pengguna','$produk')";
     // laksana arahan sql
     $pilihan = mysqli_query($conn, $baharu);
     // mesej jika berjaya

@@ -33,9 +33,9 @@ while($infol=mysqli_fetch_array($datal))
     <td><?php echo $no; ?></td>
     <td><?php echo $infol['namaProduk']; ?></td>
     <td>RM<?php echo $infol['harga']; ?></td>
-    <td width= "280px">
-        <img src="gambar/<?php echo $infol['gambar']; ?>"
-        width="auto" helght="120px"></td>
+    <td width= "200px">
+        <img src="gambar/<?php echo $infol['gambar']; ?>" 
+        width ="auto" height="120px"></td>
     <td><?php echo $infol['kira']; ?></td>
 </tr>
 <?php $no++; } ?>

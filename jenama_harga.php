@@ -25,7 +25,7 @@ $pilih2=$_POST['harga2'];
     <body>
     <?php
     $query_produk=" SELECT * FROM jenama AS t1
-    INNER JOIN produk AS t2 on 
+    INNER JOIN produk AS t2 on
     t1.idJenama=t2.idJenama WHERE (t2.idJenama=$idJenama)
     AND (t2.harga BETWEEN $pilih1 AND $pilih2)
     ORDER BY t2.harga ASC";
@@ -50,10 +50,8 @@ $pilih2=$_POST['harga2'];
     <!-- simpan ke table pilihan -->
     <p>
         <form method="POST" action=pilihan_simpan.php>
-        <input type="text" name="idProduk" value = "<?php echo
-        $senarai_produk['idProduk']; ?>" hidden>
-        <input type="text" name="idPengguna"
-        value="<?php echo $_SESSION['id']; ?>" hidden>
+        <input type="text" name="idProduk" value = "<?php echo $senarai_produk['idProduk']; ?>" hidden>
+        <input type="text" name="idPengguna" value="<?php echo $_SESSION['username']; ?>" hidden>
         <button name="submit">PILIH</button></a>
     </form>
     </p>

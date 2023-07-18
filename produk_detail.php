@@ -19,7 +19,7 @@ $qProduk=mysqli_fetch_array($dataProduk);
 <h3><?php echo $qProduk['namaProduk']; ?></h3>
 <p class="price">JENAMA : <?php echo $qProduk['namaJenama']; ?></p>
 <p class="price">RM <?php echo $qProduk['harga']; ?></p>
-<p class="price"><?php echo $qProduk['detail']; ?></p>
+<p class="price"><?php echo $qProduk['deskripsi']; ?></p>
 <p><button onclick="javascript:window.print()">CETAK</button></p>
 </body>
 </div>

@@ -31,7 +31,7 @@ $qProduk=mysqli_fetch_array($dataProduk);
     $jenama=mysqli_query($conn, "SELECT * FROM jenama");
         while ($pilihan=mysqli_fetch_array($jenama))
         {
-        echo "<option value = '$pilihan=[idJenama]'> $pilihan[namaJenama]</option>";
+        echo "<option value = '$pilihan[idJenama]'> $pilihan[namaJenama]</option>";
         }
     ?>
     </select>
