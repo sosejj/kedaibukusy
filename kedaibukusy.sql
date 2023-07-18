@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2023 at 07:31 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Jul 18, 2023 at 10:21 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,9 +28,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `jenama` (
-  `idJenama` varchar(11) NOT NULL,
+  `idJenama` int(11) NOT NULL,
   `namaJenama` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `jenama`
+--
+
+INSERT INTO `jenama` (`idJenama`, `namaJenama`) VALUES
+(1, 'Gemilang'),
+(2, 'Sasbadi');
 
 -- --------------------------------------------------------
 
@@ -44,7 +52,7 @@ CREATE TABLE `pengguna` (
   `nama` varchar(255) DEFAULT NULL,
   `aras` varchar(10) DEFAULT NULL,
   `nomhp` varchar(12) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pengguna`
@@ -52,7 +60,7 @@ CREATE TABLE `pengguna` (
 
 INSERT INTO `pengguna` (`idPengguna`, `password`, `nama`, `aras`, `nomhp`) VALUES
 ('012345678910', '12345', 'shiyang', 'ADMIN', '0124118296'),
-('060109070817', 'hello', 'user', 'PENGGUNA', '0123456789');
+('060109070817', 'hello', 'shiyangdummy', 'PENGGUNA', '0123456789');
 
 -- --------------------------------------------------------
 
@@ -62,9 +70,26 @@ INSERT INTO `pengguna` (`idPengguna`, `password`, `nama`, `aras`, `nomhp`) VALUE
 
 CREATE TABLE `pilihan` (
   `idPilihan` int(11) NOT NULL,
-  `idPengguna` varchar(20) DEFAULT NULL,
+  `idPengguna` varchar(30) DEFAULT NULL,
   `idProduk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pilihan`
+--
+
+INSERT INTO `pilihan` (`idPilihan`, `idPengguna`, `idProduk`) VALUES
+(1, '060109070817', 10),
+(18, '060109070817', 12),
+(19, '060109070817', 11),
+(20, '060109070817', 10),
+(22, '060109070817', 12),
+(23, '060109070817', 11),
+(24, '060109070817', 10),
+(25, '060109070817', 11),
+(26, '060109070817', 12),
+(27, '060109070817', 10),
+(28, '060109070817', 12);
 
 -- --------------------------------------------------------
 
@@ -76,10 +101,19 @@ CREATE TABLE `produk` (
   `idProduk` int(11) NOT NULL,
   `namaProduk` varchar(50) DEFAULT NULL,
   `deskripsi` longtext DEFAULT NULL,
-  `idJenama` varchar(11) DEFAULT NULL,
+  `idJenama` int(11) DEFAULT NULL,
   `harga` decimal(15,2) DEFAULT NULL,
   `gambar` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`idProduk`, `namaProduk`, `deskripsi`, `idJenama`, `harga`, `gambar`) VALUES
+(10, 'Modul SPM Biologi', '                            Hello', 2, '14.99', '87eb2622fe02f55eb3b0df1283301fa5jpg'),
+(11, 'Modul SPM Kimia', '    Murah je', 1, '80.00', '303973f3db0bfdca8c1dd16130d76621jpg'),
+(12, 'Modul SPM Fizik', '        asdff', 1, '9999.00', '2e9fb0187f00a20f2940e65fee6981e4jpg');
 
 --
 -- Indexes for dumped tables
@@ -117,16 +151,22 @@ ALTER TABLE `produk`
 --
 
 --
+-- AUTO_INCREMENT for table `jenama`
+--
+ALTER TABLE `jenama`
+  MODIFY `idJenama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `pilihan`
 --
 ALTER TABLE `pilihan`
-  MODIFY `idPilihan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPilihan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -136,7 +176,7 @@ ALTER TABLE `produk`
 -- Constraints for table `pilihan`
 --
 ALTER TABLE `pilihan`
-  ADD CONSTRAINT `idPengguna` FOREIGN KEY (`idPengguna`) REFERENCES `pengguna` (`IdPengguna`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `idPengguna` FOREIGN KEY (`idPengguna`) REFERENCES `pengguna` (`idPengguna`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `idProduk` FOREIGN KEY (`idProduk`) REFERENCES `produk` (`idProduk`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --

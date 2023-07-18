@@ -11,6 +11,20 @@ $qProduk=mysqli_fetch_array($dataProduk);
 ?>
 
 <html>
+    <head>
+    <script>
+        function printDiv(divId) {
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+
+            window.print();
+
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+    </head>
 <div id="menu"> <?php include 'menu2.php'; ?></div>
 <div id="isi">
 <body>
@@ -20,7 +34,7 @@ $qProduk=mysqli_fetch_array($dataProduk);
 <p class="price">JENAMA : <?php echo $qProduk['namaJenama']; ?></p>
 <p class="price">RM <?php echo $qProduk['harga']; ?></p>
 <p class="price"><?php echo $qProduk['deskripsi']; ?></p>
-<p><button onclick="javascript:window.print()">CETAK</button></p>
+<p><button onclick="printDiv('isi')">CETAK</button></p>
 </body>
 </div>
 </html>

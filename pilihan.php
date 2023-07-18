@@ -1,5 +1,19 @@
 <?php include 'header.php'; ?>
 <html>
+    <head>
+    <script>
+        function printDiv(divId) {
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+
+            window.print();
+
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+    </head>
     <!-- panggil menu -->
     <div id="menu">
         <?php include 'menu2.php'; ?>
@@ -46,7 +60,7 @@ while($infol=mysqli_fetch_array($datal))
         Jumlah Pillhan :
      <?php echo $no-1; ?>
     </font>
-    <p><button onclick="javascript:window.print()"> CETAK </button></p>
+    <p><button onclick="printDiv('isi')"> CETAK </button></p>
     </td>
     </tr>
             </table>

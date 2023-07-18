@@ -4,21 +4,25 @@
         <?php require 'connect.php';
 
         $query_random="SELECT * FROM produk ORDER BY rand() limit 3";
-        $papar_query_random = mysqli_query($conn, $query_random );
+        $papar_query_random = mysqli_query($conn, $query_random);
         if (mysqli_num_rows($papar_query_random)>0)
         {
             foreach($papar_query_random as $senarai_produk)
             {
         ?>
         <div class="card">
+            <!-- paparkan butiran produk -->
+            <h3><?php echo $senarai_produk['namaProduk'];?></h3>
+            <p><?php echo $senarai_produk['deskripsi']?></p>
         <div class="gambar">
+            <!-- paparkan gambar produk -->
             <img src="gambar/<?php echo $senarai_produk['gambar']; ?>"
             width="auto" height="120px">
         </div>
         <?php
             }
         } else {
-            echo "tiada produk";
+            echo "Tiada Produk";
         }
         ?>
     </body>

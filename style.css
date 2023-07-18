@@ -1,15 +1,16 @@
 /*paparan produk*/
 .card {
-    float:left;
+    float: left;
     max-width: 200px;
     padding: 10px;
     margin: 2px;
-    width: 100%;
+    /* width: 25%;  Adjust this value to allow multiple cards per row */
     text-align: center;
+    box-sizing: border-box; /* This ensures that padding and border are included in the element's total width and height */
 }
 
 /*frame gambar*/
-.picture {
+.gambar {
     height: 120px;
     width: 100%;
     border: thin solid black;

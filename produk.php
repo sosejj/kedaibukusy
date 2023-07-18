@@ -1,5 +1,19 @@
 <?php include 'header.php'; ?>
 <html>
+<head>
+    <script>
+        function printDiv(divId) {
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+
+            window.print();
+
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+</head>
 <!-- panggil menu -->
 <div id="menu">
     <?php include 'menu2.php'; ?> 
@@ -48,8 +62,8 @@ onclick="return confirm('Anda Pasti')">HAPUS</a></td>
     <td colspan="6" align="center">
         <font style = 'font-size:10px'>~~Senarai Tamat~~<br />
         Jumlah Pilihan : <?php echo $no-1;  ?>
-        </font> 
-        <p><button onclick="javascript:window.print()">CETAK</button></p> 
+        </font>
+        <p><button onclick="printDiv('isi')">CETAK</button></p>
     </td>
 </tr>
 </table>
