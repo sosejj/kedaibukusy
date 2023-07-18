@@ -17,14 +17,14 @@ $qProduk=mysqli_fetch_array($dataProduk);
 <!-- panggil isi -->
 <div id="isi">
 <head>
-    <h2 style="text-align:center">EDIT PRODUK</h2>
+    <h2 style="text-align:center">Edit Produk Sedia Ada</h2>
 </head>
 <body>
     <form method="POST" action="produk_kemaskini.php" enctype="multipart/form-data">
-    <p>NAMA PRODUK<br>
+    <p>Nama Produk <br>
     <input type="text" name="nama" value="<?php echo $qProduk['namaProduk']; ?>"
     size="50" required autofocus></p>
-    <p>JENAMA<br>
+    <p>Jenama <br>
     <select name="jenama">
     <?php
     echo "<option selected value='$qProduk[idJenama]'> $qProduk[namaJenama]</option>";
@@ -36,13 +36,13 @@ $qProduk=mysqli_fetch_array($dataProduk);
     ?>
     </select>
     </p>
-    <p>HARGA<br>
-    <input type="text" name="harga" value="<?php echo $qProduk['harga']; ?>"
+    <p>Harga <br>
+    <input type="number" name="harga" value="<?php echo $qProduk['harga']; ?>"
     size="10" required></p>
-    <p>DETAIL PRODUK<br>
+    <p>Detail Produk <br>
     <textarea name="detail" rows="10" cols="50" required>
     <?php echo $qProduk['deskripsi']; ?></textarea></p>
-    <p>GAMBAR<br>
+    <p>Gambar Produk<br>
     <img src="gambar/<?php echo $qProduk['gambar']; ?>"
     width="30%" height="auto">
     <input type="text" name="id" value="<?php echo $qProduk['idProduk']; ?>" hidden>

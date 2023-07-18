@@ -3,7 +3,8 @@ require 'connect.php';
 if(isset($_POST['import'])){
     $filename=$_FILES["file"]["tmp_name"];
     if($_FILES["file"]["size"]>0){
-while (($getdata=fgetcsv($file,10000,",")) !== FALSE)
+        $file = fopen($filename, "r");
+while (($getdata=fgetcsv($file,10000,",")) !== false)
 {
     // masuk data dalam jadual
     $import= "INSERT INTO jenama (idJenama, namaJenama)
@@ -15,8 +16,8 @@ while (($getdata=fgetcsv($file,10000,",")) !== FALSE)
         window.location='import.php' </script>";
     }else{
         echo "<script>alert('Pindah naik fail CSV berjaya');
-        window.location='jenama. php' </script>";
-} 
+        window.location='jenama.php' </script>";
+}
 }fclose($file);
     }
 }

@@ -6,7 +6,7 @@
 
 <div id="isi"> 
 <head></head>
-    <h2 style="text-align: center">Tambah Produk Baru</h2> 
+    <h2 style="text-align: center">Tambah Produk Baharu</h2> 
 </head> 
 <body> 
     <form method="POST" action="produk_simpan.php" enctype="multipart/form-data">
@@ -27,8 +27,8 @@
         </select>
         <a href="jenama.php">Senarai Jenama</a>
     </p> 
-    <p>Harga <br>
-    <input type="text" name="harga" placeholder="RM 00.00" size="50" required ></p> 
+    <p>Harga (RM)<br>
+    <input type="number" name="harga" placeholder="00.00" size="50" required ></p> 
     <p>Detail Produk <br>
     <textarea name="detail" placeholder="Masukkan Maklumat Produk" 
     rows="10" cols="50" required></textarea> </p> 

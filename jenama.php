@@ -6,7 +6,7 @@
 <div id="isi">
     <body>
         <center>
-            <h2><u> SENARAI JENAMA PERABOT</u></h2>
+            <h2><u>Senarai Jenama</u></h2>
         </center>
 
         <table width="90%" border=1>

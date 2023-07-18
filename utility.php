@@ -10,22 +10,18 @@
             document.body.style.fontSize = fontsize+"em";
         }
     </script>
-    <center>
+    <body>
         <input type="button" value="++" onclick="zoomin()"/>
         <input type="button" value="--" onclick="zoomout()"/>
-        <button id="color">Warna</button>
-    </center>
+        <button id="color">Warna Rawak</button>
+    </body>
     <script>
         document.getElementById('color').onclick = changeColor;
-        var currentColor ="red";
+        var colors = ["red", "blue", "black"];
+        var currentColorIndex = 0;
         function changeColor() {
-            if(currentColor =="red"){
-                document.body.style.color ="blue";
-                currentColor ="blue";
-            } else {
-                document.body.style.color="red";
-                currentColor = "red";
-            }
+            currentColorIndex = Math.floor(Math.random() * colors.length);
+            document.body.style.color = colors[currentColorIndex];
         }
     </script>
 </html>

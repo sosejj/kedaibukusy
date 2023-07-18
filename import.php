@@ -17,12 +17,12 @@ include 'header.php';
                 <button type="submit" id="submit" name="import">
                   UPLOAD</button>
             </form>
-            *Contoh : <br>
+            *Contoh: <br>
             JENAMA1 <br>
             JENAMA2 <br>
             JENAMA3 <br>
             JENAMA4
-            <p>File mesti dalam bentuk .csv</p>
+            <p>Fail mesti dalam bentuk .csv</p>
 </div>
 </body>
 </html>
