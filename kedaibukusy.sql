@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2023 at 10:21 PM
+-- Generation Time: Jul 19, 2023 at 04:29 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -38,7 +38,9 @@ CREATE TABLE `jenama` (
 
 INSERT INTO `jenama` (`idJenama`, `namaJenama`) VALUES
 (1, 'Gemilang'),
-(2, 'Sasbadi');
+(2, 'Sasbadi'),
+(3, 'PAN Asia Publications'),
+(5, 'Popular');
 
 -- --------------------------------------------------------
 
@@ -89,7 +91,10 @@ INSERT INTO `pilihan` (`idPilihan`, `idPengguna`, `idProduk`) VALUES
 (25, '060109070817', 11),
 (26, '060109070817', 12),
 (27, '060109070817', 10),
-(28, '060109070817', 12);
+(28, '060109070817', 12),
+(29, '060109070817', 11),
+(30, '060109070817', 10),
+(31, '060109070817', 10);
 
 -- --------------------------------------------------------
 
@@ -112,7 +117,7 @@ CREATE TABLE `produk` (
 
 INSERT INTO `produk` (`idProduk`, `namaProduk`, `deskripsi`, `idJenama`, `harga`, `gambar`) VALUES
 (10, 'Modul SPM Biologi', '                            Hello', 2, '14.99', '87eb2622fe02f55eb3b0df1283301fa5jpg'),
-(11, 'Modul SPM Kimia', '    Murah je', 1, '80.00', '303973f3db0bfdca8c1dd16130d76621jpg'),
+(11, 'Modul SPM Kimia', '        Murah je', 1, '80.00', '303973f3db0bfdca8c1dd16130d76621jpg'),
 (12, 'Modul SPM Fizik', '        asdff', 1, '9999.00', '2e9fb0187f00a20f2940e65fee6981e4jpg');
 
 --
@@ -154,19 +159,19 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `jenama`
 --
 ALTER TABLE `jenama`
-  MODIFY `idJenama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idJenama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pilihan`
 --
 ALTER TABLE `pilihan`
-  MODIFY `idPilihan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `idPilihan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
