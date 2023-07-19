@@ -1,10 +1,11 @@
 <?php include 'header.php' ?>
 <html>
-    <div id="isi">
-        <head>
-            <h2 style = "text-align: center"> Daftar Pengguna Baru </h2>
-        </head>
-        <body>
+    <div id="menu">
+        <?php include 'menu2.php'; ?>
+    </div>
+    <body>
+        <div id="isi">
+            <h2><u>Daftar Pengguna Baru</u></h2>
             <form method = "POST" action = "signup_simpan.php">
                 <p>ID Pengguna (No. KP): <br> <!-- input username -->
                     <input type = "text" name = "username" placeholder = "12 nombor tanpa -"
@@ -25,8 +26,8 @@
                     <button name = "hantar" type = "submit">DAFTAR</button>
                     <button type = "reset">PADAM</button>
                 </div>
-                <font color = 'cyan'>*Pastikan maklumat anda betul sebelum hantar!*</font>
+                <p style="color: red;"> * Pastikan maklumat yang dimasukkan adalah betul</p>
             </form>
-        </body>
-    </div>
+        </div>
+    </body>
 </html>

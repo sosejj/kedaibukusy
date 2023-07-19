@@ -28,8 +28,8 @@ $qProduk=mysqli_fetch_array($dataProduk);
 <div id="menu"> <?php include 'menu2.php'; ?></div>
 <div id="isi">
 <body>
-<center><h2><U>DETAIL PRODUK</U></h2></center>
-<img src="gambar/<?php echo $qProduk['gambar']; ?>" width="40%" height="auto">
+<h2><U>Butiran Produk</U></h2>
+<img class="gambar" src="gambar/<?php echo $qProduk['gambar']; ?>" width="40%" height="auto">
 <h3><?php echo $qProduk['namaProduk']; ?></h3>
 <p class="price">JENAMA : <?php echo $qProduk['namaJenama']; ?></p>
 <p class="price">RM <?php echo $qProduk['harga']; ?></p>

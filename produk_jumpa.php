@@ -17,7 +17,7 @@ if ($jumpa==NULL){
     <!-- Panggil Isi -->
     <div id="isi">
     <head>
-        <h2 style="text-align:center">HASIL CARIAN NAMA PRODUK</h2>
+        <h2><u>Hasil Carian Nama Produk</u></h2>
     </head>
     <body>
         <?php
@@ -48,7 +48,7 @@ if ($jumpa==NULL){
     <?php
         }
     }else{
-        echo "Maaf, tiada yang sepadan";
+        echo "Maaf, tiada yang sepadan.";
     }
     ?>
     </div>

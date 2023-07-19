@@ -19,8 +19,7 @@ $pilih2=$_POST['harga2'];
     </div>
     <div id="isi">
         <head>
-            <h2 style="text-align:center"> SENARAI PRODUK MENGIKUT
-             PILIHAN HARGA DAN JENAMA</h2>
+            <h2><u>Senarai Produk Mengikut Harga dan Jenama</u></h2>
         </head>
     <body>
     <?php
@@ -38,9 +37,7 @@ $pilih2=$_POST['harga2'];
     <!-- papar produk -->
     <div class="card">
     <div class="gambar">
-        <img src="gambar/<?php echo
-        $senarai_produk['gambar']; ?>"
-        width="auto" height="120">
+        <img class="gambar" src="gambar/<?php echo $senarai_produk['gambar']; ?>">
     </div>
     <h3><?php echo $senarai_produk['namaProduk']; ?></h3>
     <p class="price">Jenama:

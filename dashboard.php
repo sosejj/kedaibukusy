@@ -13,7 +13,10 @@
 <!-- papar ucapan -->
     <head>
         <h2 style="text-align:center">SELAMAT DATANG
-        <?php echo $_SESSION['nama']; ?></h2>
+        <?php if (isset($_SESSION['nama'])) {
+            echo $_SESSION['nama'];
+        }
+        ?></h2>
     </head>
     <!-- papar page -->
     <?php include 'welcome.php' ?></h2>

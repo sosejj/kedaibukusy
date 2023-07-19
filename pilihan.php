@@ -18,19 +18,17 @@
     <div id="menu">
         <?php include 'menu2.php'; ?>
     </div>
+    <body>
     <!-- panggil isi -->
     <div id="isi">
-        <body>
-            <center>
-                <h2> <U> Statistik Pilihan Kegemaran Pengguna </U></h2>
-            </center>
-            <table width="90%" border=1 align="left">
+        <h2><U> Statistik Pilihan Kegemaran Pengguna</U></h2>
+            <table>
             <tr>
-                <td>BIL</td>
-                <td>NAMA PRODUK</td>
-                <td>HARGA</td>
-                <td>GAMBAR</td>
-                <td>BILANGAN</td>
+                <td>Bil</td>
+                <td>Nama Produk</td>
+                <td>Harga</td>
+                <td>Gambar</td>
+                <td>Bilangan</td>
             </tr>
 <?php
 $no=1;
@@ -43,27 +41,22 @@ ORDER BY COUNT(t1.idPengguna) DESC");
 while($infol=mysqli_fetch_array($datal))
 {
 ?>
-<tr>
-    <td><?php echo $no; ?></td>
-    <td><?php echo $infol['namaProduk']; ?></td>
-    <td>RM<?php echo $infol['harga']; ?></td>
-    <td width= "200px">
-        <img src="gambar/<?php echo $infol['gambar']; ?>" 
-        width ="auto" height="120px"></td>
-    <td><?php echo $infol['kira']; ?></td>
-</tr>
+            <tr>
+                <td><?php echo $no; ?></td>
+                <td><?php echo $infol['namaProduk']; ?></td>
+                <td>RM<?php echo $infol['harga']; ?></td>
+                <td width= "200px">
+                    <img class="gambar-kecil" src="gambar/<?php echo $infol['gambar']; ?>" ></td>
+                <td><?php echo $infol['kira']; ?></td>
+            </tr>
 <?php $no++; } ?>
-<tr>
-    <td colspan="5" align="center">
-        <font style='font-size: 10px' >
-        * SENARAI TAMAT * <br  />
-        Jumlah Pillhan :
-     <?php echo $no-1; ?>
-    </font>
-    <p><button onclick="printDiv('isi')"> CETAK </button></p>
-    </td>
-    </tr>
+            <tr>
+                <td colspan="6">
+                    <p style="font-size: 12px;">Jumlah Pilihan: <?php echo $no-1;  ?></p>
+                    <p><button onclick="printDiv('isi')">CETAK</button></p>
+                </td>
+            </tr>
             </table>
-        </body>
     </div>
+    </body>
 </html>

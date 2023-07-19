@@ -8,14 +8,12 @@ include 'header.php';
 ?>
 
 <html>
-<div id=" menu">
+<div id="menu">
     <?php include 'menu2.php'; ?>
 </div>
+<body>
 <div id="isi">
-    <head>
-        <h2 style="text-align:center">SENARAI PRODUK IKUT JENAMA</h2>
-    </head>
-    <body>
+    <h2><u>Senarai Produk Ikut Jenama</u></h2>
         <?php
         $query_jenama="SELECT * FROM jenama AS t1 INNER JOIN produk
         AS t2 ON t1.idJenama=t2.idJenama WHERE t1.idJenama=$idBrand
@@ -26,11 +24,9 @@ include 'header.php';
             echo "<hr>";
             foreach ($papar_query_jenama as $senarai_jenama) {
         ?>
-        <center>
             <div class="card">
-            <div class="gambar">
-            <img src="gambar/<?php echo $senarai_jenama['gambar']; ?>"
-            width="auto" height="120px">
+            <div>
+            <img class="gambar" src="gambar/<?php echo $senarai_jenama['gambar']; ?>">
             </div>
             <h3><?php echo $senarai_jenama['namaProduk'];?></h3>
             <p class="price">RM<?php echo $senarai_jenama['harga']?></p>
@@ -50,7 +46,6 @@ include 'header.php';
         }
         ?>
     </div>
-    </center>
     <br>
-    </body>
+</body>
 </html>

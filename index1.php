@@ -3,7 +3,7 @@ include 'header.php';
 ?>
 <html>
     <div id="menu">
-        <?php include 'menu1.php'; ?>
+        <?php include 'menu2.php'; ?>
     </div>
     <div id="isi">
         <head>

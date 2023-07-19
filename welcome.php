@@ -1,6 +1,6 @@
 <html>
     <body>
-        <h3>Pilihan Terbaik Untuk Anda</h3>
+        <h3>~Pilihan Terbaik Untuk Anda~</h3>
         <?php require 'connect.php';
 
         $query_random="SELECT * FROM produk ORDER BY rand() limit 3";
@@ -9,16 +9,14 @@
         {
             foreach($papar_query_random as $senarai_produk)
             {
-        ?>
-        <div class="card">
-            <!-- paparkan butiran produk -->
-            <h3><?php echo $senarai_produk['namaProduk'];?></h3>
-            <p><?php echo $senarai_produk['deskripsi']?></p>
-        <div class="gambar">
-            <!-- paparkan gambar produk -->
-            <img src="gambar/<?php echo $senarai_produk['gambar']; ?>"
-            width="auto" height="120px">
-        </div>
+            ?>
+            <div class="card">
+                <!-- paparkan gambar produk -->
+                <img alt= "Gambar Produk" class="gambar" src="gambar/<?php echo $senarai_produk['gambar']; ?>">
+                <!-- paparkan butiran produk -->
+                <h3><?php echo $senarai_produk['namaProduk'];?></h3>
+                <p><?php echo $senarai_produk['deskripsi']?></p>
+            </div>
         <?php
             }
         } else {
@@ -26,5 +24,4 @@
         }
         ?>
     </body>
-    </div>
 </html>

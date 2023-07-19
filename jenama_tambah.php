@@ -1,15 +1,12 @@
 <?php include 'header.php'; ?>
 <html>
-<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-<div id=" menu">
+<div id="menu">
     <?php include 'menu2.php'; ?>
 </div>
-
-<div id="isi">
-<head>
-    <h2 style="text-align: center"> Tambah Jenama Produk Baru</h2>
-</head>
 <body>
+<div id="isi">
+    <h2><u>Tambah Jenama Produk Baru</u></h2>
+
     <form method="POST" action="jenama_simpan.php">
     <p>Jenama Produk <br>
     <input type="text" name="jenama" placeholder="Tuliskan Nama Jenama"
@@ -19,9 +16,8 @@
         <button name="submit" type="submit">SIMPAN</button>
         <button type="reset">RESET</button>
     </div>
-<font colour='red'> * Pastikan Maklumat Anda Betul Sebelum Membuat Pendaftaran.</font>
-
+    <p style="color: red;"> * Pastikan Maklumat Anda Betul Sebelum Membuat Pendaftaran.</p>
 </form>
-</body>
 </div>
+</body>
 </html>
