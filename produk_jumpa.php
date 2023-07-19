@@ -31,7 +31,7 @@ if ($jumpa==NULL){
             ?>
             <div class="card">
             <div class="gambar">
-                <img src="gambar/<?php echo $senarai_jenama['gambar']; ?>"
+                <img class="gambar" src="gambar/<?php echo $senarai_jenama['gambar']; ?>"
                 width="auto" height="120px">
             </div>
             <h3><?php echo $senarai_jenama['namaProduk']; ?></h3>
