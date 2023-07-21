@@ -29,8 +29,7 @@
     <p>Harga (RM)<br>
     <input type="number" name="harga" placeholder="00.00" size="17" required ></p>
     <p>Detail Produk<br>
-    <textarea name="detail" placeholder="Masukkan Maklumat Produk"
-    rows="10" cols="50" required></textarea> </p>
+    <textarea name="detail" placeholder="Masukkan Maklumat Produk" rows="10" cols="50" required></textarea></p>
     <p>Gambar Produk<br>
     <input type="file" name="gambar" accept=".jpg,.jpeg,.png" required></p>
     <br>

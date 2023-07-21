@@ -38,8 +38,7 @@ $qProduk=mysqli_fetch_array($dataProduk);
     <input type="number" name="harga" value="<?php echo $qProduk['harga']; ?>"
     size="10" required></p>
     <p>Detail Produk<br>
-    <textarea name="detail" rows="10" cols="50" required>
-    <?php echo $qProduk['deskripsi']; ?></textarea></p>
+    <textarea name="detail" rows="10" cols="50" required><?php echo $qProduk['deskripsi']; ?></textarea></p>
     <p>Gambar Produk<br>
     <img class="gambar" src="gambar/<?php echo $qProduk['gambar']; ?>">
     <input type="text" name="id" value="<?php echo $qProduk['idProduk']; ?>" hidden>
