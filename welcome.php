@@ -1,6 +1,7 @@
 <html>
     <body>
-        <h3>~Pilihan Terbaik Untuk Anda~</h3>
+        <h2><u>SELAMAT DATANG ke <?php echo $kedai;  ?></u></h2>
+        <marquee style="font-size: 20px">~Pilihan Terbaik Untuk Anda~</marquee>
         <?php require 'connect.php';
 
         $query_random="SELECT * FROM produk ORDER BY rand() limit 3";

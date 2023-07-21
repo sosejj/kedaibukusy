@@ -56,7 +56,7 @@ $pilih2=$_POST['harga2'];
     <?php
         }
     }else{
-        echo "tiada rekod ditemui";
+        echo "Tiada produk yang ditemui";
     }
     ?>
     </body>

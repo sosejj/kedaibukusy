@@ -45,8 +45,7 @@ while ($infol=mysqli_fetch_array($datal))
     <td><?php echo $infol['namaProduk']; ?></td>
     <td><?php echo $infol['namaJenama']; ?></td>
     <td>RM<?php echo $infol['harga']; ?></td>
-    <td width="200px"><img src="gambar/<?php echo $infol['gambar']; ?>"
-    width = "auto" height="120px"></td>
+    <td width="200px"><img class="gambar-kecil" src="gambar/<?php echo $infol['gambar']; ?>"></td>
 <td>
 <!-- papar pautan -->
 <a href="produk_edit.php?id=
