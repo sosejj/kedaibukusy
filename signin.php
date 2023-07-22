@@ -3,7 +3,7 @@
     <div>
         No. Kad Pengenalan: <br>
         <input onblur="checkLength(this)" type="text" name="username" placeholder="Sila isi" maxlength="12"
-        size="25" onkeypress='return event.charCode >=48 && event.charCode <=57'required autofocus />
+        size="25" onkeypress='return event.charCode >=48 && event.charCode <=57'required />
         <script>
             function checkLength (e1) {
                 if (e1.value.length != 12) {

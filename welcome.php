@@ -1,6 +1,6 @@
 <html>
     <body>
-        <h2><u>SELAMAT DATANG ke <?php echo $kedai;  ?></u></h2>
+        <h2><u>SELAMAT DATANG ke <?php echo $kedai; ?></u></h2>
         <marquee style="font-size: 20px">~Pilihan Terbaik Untuk Anda~</marquee>
         <?php require 'connect.php';
 
