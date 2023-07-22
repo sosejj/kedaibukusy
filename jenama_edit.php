@@ -7,21 +7,20 @@ $qJenama=mysqli_fetch_array($datajenama);
 ?>
 
 <html>
-    <div id = "menu">
+    <div id="menu">
         <?php include 'menu2.php'; ?>
     </div>
-    <div id="isi">
-        <head>
-            <h2 style = "text-align: center">EDIT JENAMA</h2>
-        </head>
-        <body>
-            <form action="POST" action="jenama_kemaskini.php">
-            <p>JENAMA <br>
-            <input type="text" name="nama" value=" <?php echo $qJenama['idjenama']; ?>"
-            size ="50" required autofocus ></p>
-            <input type="text" name="id" value=" <?php echo $qJenama['namaJenama']; ?>"hidden>
+    <body>
+        <div id="isi">
+            <h2><u>Edit Jenama Sedia Ada</u></h2>
+            <form method="POST" action="jenama_kemaskini.php">
+            <p>Nama Jenama<br>
+            <input type="text" name="nama" value="<?php echo $qJenama['namaJenama']; ?>" size="50" required autofocus>
+            </p>
+            <input type="text" name="id" value="<?php echo $qJenama['idJenama']; ?>" hidden>
             <button name="submit" type="submit">SIMPAN</button> <br>
-            <font color='red'>Pastikan maklumat sudah betul</font>
-        </body>
-    </div>
+            <p style="color: red;">* Pastikan maklumat yang dimasukkan adalah betul</p>
+            </form>
+        </div>
+    </body>
 </html>
