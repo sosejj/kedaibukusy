@@ -7,8 +7,7 @@ if(isset($_POST['import'])){
 while (($getdata=fgetcsv($file,10000,",")) !== false)
 {
     // masuk data dalam jadual
-    $import= "INSERT INTO jenama (idJenama, namaJenama)
-     values (NULL,'".$getdata[0]."')";
+    $import= "INSERT INTO jenama (idJenama, namaJenama) values (NULL,'".$getdata[0]."')";
     // sql query
     $tambah=mysqli_query($conn, $import);
     if(!isset($tambah)){
