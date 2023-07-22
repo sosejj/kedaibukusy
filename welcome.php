@@ -2,8 +2,8 @@
     <body>
         <h2><u>SELAMAT DATANG
         <?php if (isset($_SESSION['nama'])) {
-            echo $_SESSION['nama'];
-        } else {
+            echo $_SESSION['nama']; ?></u></h2>
+        <?php } else {
             ?> ke <?php echo $kedai; ?></u></h2>
         <?php } ?>
         <marquee style="font-size: 20px">~Pilihan Terbaik Untuk Anda~</marquee>
