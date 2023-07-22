@@ -10,7 +10,7 @@ if (isset($_POST['username'])) {
 
     if ($hasil1) {
         echo "<script> alert ('Pendaftaran Berjaya');
-        window.location = 'index.php'</script>";
+        window.location = 'index1.php'</script>";
     } else {
         echo "<script> alert ('Pendaftaran Gagal, Semak Semula Maklumat');
         window.location = 'signup.php'</script>";

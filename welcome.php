@@ -1,6 +1,11 @@
 <html>
     <body>
-        <h2><u>SELAMAT DATANG ke <?php echo $kedai; ?></u></h2>
+        <h2><u>SELAMAT DATANG
+        <?php if (isset($_SESSION['nama'])) {
+            echo $_SESSION['nama'];
+        } else {
+            ?> ke <?php echo $kedai; ?></u></h2>
+        <?php } ?>
         <marquee style="font-size: 20px">~Pilihan Terbaik Untuk Anda~</marquee>
         <?php require 'connect.php';
 
