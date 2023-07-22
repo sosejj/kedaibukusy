@@ -12,7 +12,7 @@
                     minlength = "12" maxlength = "12" size = "30" required autofocus>
                 </p>
                 <p>Kata Laluan: <br> <!-- input password -->
-                    <input type = "text" name = "password" placeholder = "5 hingga 20 huruf/nombor"
+                    <input type = "password" name = "password" placeholder = "5 hingga 20 huruf/nombor"
                     minlength = "5" maxlength = "20" size = "30" required>
                 </p>
                 <p>Nama Pengguna: <br> <!-- input nama -->
