@@ -15,7 +15,7 @@ if (isset($_POST['username'])){
 		$_SESSION ['username'] = $row ['idPengguna'];
 		$_SESSION ['nama'] = $row ['nama'];
 		$_SESSION ['level'] = $row ['aras'];
-		header("location: dashboard.php");
+		header("location: index1.php");
 	}
 }
 ?>
