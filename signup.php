@@ -16,7 +16,7 @@
                     minlength = "5" maxlength = "20" size = "30" required>
                 </p>
                 <p>Nama Pengguna: <br> <!-- input nama -->
-                    <input type = "text" name = "nama" placeholder = "Nama Penuh Anda" size = "60" required>
+                    <input type = "text" name = "nama" placeholder = "Nama Penuh Anda" size = "30" required>
                 </p>
                 <p>Nombor Telefon: <br> <!-- input nombor telefon -->
                     <input type = "text" name = "nomhp" placeholder = "Nombor Telefon tanpa -" maxlength = '13'
