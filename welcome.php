@@ -1,6 +1,6 @@
 <html>
     <body>
-        <h2><u>SELAMAT DATANG
+        <h2><u>Selamat Datang
         <?php if (isset($_SESSION['nama'])) {
             echo $_SESSION['nama']; ?></u></h2>
         <?php } else {
