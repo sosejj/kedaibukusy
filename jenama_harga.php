@@ -36,7 +36,7 @@ $pilih2=$_POST['harga2'];
     ?>
     <!-- papar produk -->
     <div class="card">
-    <div class="gambar">
+    <div>
         <img class="gambar" src="gambar/<?php echo $senarai_produk['gambar']; ?>">
     </div>
     <h3><?php echo $senarai_produk['namaProduk']; ?></h3>

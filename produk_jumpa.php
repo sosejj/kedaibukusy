@@ -30,7 +30,7 @@ if ($jumpa==NULL){
             {
             ?>
             <div class="card">
-            <div class="gambar">
+            <div>
                 <img class="gambar" src="gambar/<?php echo $senarai_jenama['gambar']; ?>"
                 width="auto" height="120px">
             </div>
