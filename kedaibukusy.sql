@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2023 at 04:29 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jul 26, 2023 at 07:22 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,17 +30,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `jenama` (
   `idJenama` int(11) NOT NULL,
   `namaJenama` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `jenama`
 --
 
 INSERT INTO `jenama` (`idJenama`, `namaJenama`) VALUES
-(1, 'Gemilang'),
-(2, 'Sasbadi'),
-(3, 'PAN Asia Publications'),
-(5, 'Popular');
+(1, 'Pelangi'),
+(2, 'Sasbadi');
 
 -- --------------------------------------------------------
 
@@ -54,7 +52,7 @@ CREATE TABLE `pengguna` (
   `nama` varchar(255) DEFAULT NULL,
   `aras` varchar(10) DEFAULT NULL,
   `nomhp` varchar(12) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pengguna`
@@ -62,7 +60,11 @@ CREATE TABLE `pengguna` (
 
 INSERT INTO `pengguna` (`idPengguna`, `password`, `nama`, `aras`, `nomhp`) VALUES
 ('012345678910', '12345', 'shiyang', 'ADMIN', '0124118296'),
-('060109070817', 'hello', 'shiyangdummy', 'PENGGUNA', '0123456789');
+('761115069874', 'THaxbcs', 'Chew Jia Yi', 'PENGGUNA', '0176428851'),
+('872602087821', 'Dyla0123', 'Dylan Kiu', 'PENGGUNA', '01178952546'),
+('880529075558', '687s@@', 'Chew Chia Yi', 'PENGGUNA', '0125554411'),
+('930221013297', 'pass3', 'Wong Chong Xuan', 'PENGGUNA', '0175448844'),
+('980731101245', '1234abc', 'Kipt Khor', 'PENGGUNA', '0124185425');
 
 -- --------------------------------------------------------
 
@@ -74,27 +76,7 @@ CREATE TABLE `pilihan` (
   `idPilihan` int(11) NOT NULL,
   `idPengguna` varchar(30) DEFAULT NULL,
   `idProduk` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `pilihan`
---
-
-INSERT INTO `pilihan` (`idPilihan`, `idPengguna`, `idProduk`) VALUES
-(1, '060109070817', 10),
-(18, '060109070817', 12),
-(19, '060109070817', 11),
-(20, '060109070817', 10),
-(22, '060109070817', 12),
-(23, '060109070817', 11),
-(24, '060109070817', 10),
-(25, '060109070817', 11),
-(26, '060109070817', 12),
-(27, '060109070817', 10),
-(28, '060109070817', 12),
-(29, '060109070817', 11),
-(30, '060109070817', 10),
-(31, '060109070817', 10);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -109,16 +91,18 @@ CREATE TABLE `produk` (
   `idJenama` int(11) DEFAULT NULL,
   `harga` decimal(15,2) DEFAULT NULL,
   `gambar` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`idProduk`, `namaProduk`, `deskripsi`, `idJenama`, `harga`, `gambar`) VALUES
-(10, 'Modul SPM Biologi', '                            Hello', 2, '14.99', '87eb2622fe02f55eb3b0df1283301fa5jpg'),
-(11, 'Modul SPM Kimia', '        Murah je', 1, '80.00', '303973f3db0bfdca8c1dd16130d76621jpg'),
-(12, 'Modul SPM Fizik', '        asdff', 1, '9999.00', '2e9fb0187f00a20f2940e65fee6981e4jpg');
+(1, 'FOCUS PT3 Tingkatan 1,2,3: Matematik', '-320 muka surat \n-untuk pelajar T1-T3', 1, '31.90', NULL),
+(2, 'FOCUS PT3 Tingkatan 1,2,3: Sains', '-320 muka surat \n-untuk pelajar T1-T3', 1, '30.90', NULL),
+(3, 'FOCUS PT3 Tingkatan 1,2,3: Bahasa Melayu', '-320 muka surat \n-untuk pelajar T1-T3', 1, '29.90', NULL),
+(4, 'MASTERCLASS T4,5: Prinsip Perakaunan', '-320 muka surat \n-untuk pelajar T4-T5', 2, '28.90', NULL),
+(5, 'MASTERCLASS T4,5: RBT', '-320 muka surat \n-untuk pelajar T4-T5', 2, '27.90', NULL);
 
 --
 -- Indexes for dumped tables
@@ -159,19 +143,19 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `jenama`
 --
 ALTER TABLE `jenama`
-  MODIFY `idJenama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idJenama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `pilihan`
 --
 ALTER TABLE `pilihan`
-  MODIFY `idPilihan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `idPilihan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idProduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
